@@ -1,0 +1,6 @@
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        m=nums.count(val)
+        for i in range(m):
+            nums.remove(val)
+        return len(nums)
