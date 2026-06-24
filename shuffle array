@@ -1,0 +1,10 @@
+class Solution:
+    def shuffle(self, nums: List[int], n: int) -> List[int]:
+        n2=len(nums)
+        ans=[0]*(n2)
+        j=0
+        for i in range(n):
+            ans[j]=nums[i]
+            ans[j+1]=nums[n+i]
+            j+=2
+        return ans
