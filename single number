@@ -1,0 +1,5 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        n=sum(set(nums))*2
+        m=sum(nums)
+        return n-m
