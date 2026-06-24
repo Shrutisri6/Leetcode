@@ -1,0 +1,16 @@
+class Solution:
+    def selfDividingNumbers(self, left: int, right: int) -> List[int]:
+        nums=[]
+        for i in range(left, right+1):
+            flag=True
+            for j in str(i):
+                if j=='0':
+                    flag=False
+                    continue
+                if i%int(j)!=0:
+                    flag=False
+            if flag:
+                nums.append(int(i))
+        nums=list(set(nums))
+        nums.sort()
+        return nums
