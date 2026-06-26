@@ -1,0 +1,24 @@
+class Solution:
+    def maxVowels(self, s: str, k: int) -> int:
+        n=len(s)
+        maxi=0
+
+        count=0
+
+        vow={'a','e','i','o','u'}
+
+        for i in range(k):
+            if s[i] in vow:
+                count+=1
+        maxi=count
+        print(count)
+
+        for i in range(1, n-k+1):
+            print("hi")
+            if s[i-1] in vow:
+                count-=1
+            if s[i+k-1] in vow:
+                count+=1
+            if count>maxi:
+                maxi=count
+        return maxi
